@@ -52,7 +52,7 @@ const helpContents = (name, commands) => `\
     <h1>${name} Help</h1>
     <div class="commands">
       ${commands}
-      <a href="https://truemotion.atlassian.net/wiki/spaces/QA/pages/556630099/Truebot">For more detailed help please see the following page in confluence</a>
+      ${<a href="https://truemotion.atlassian.net/wiki/spaces/QA/pages/556630099/Truebot">For more detailed help please see the following page in confluence</a>}
     </div>
   </body>
 </html>\
