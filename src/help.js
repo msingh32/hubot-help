@@ -120,8 +120,10 @@ var getHelpCommands = function getHelpCommands (robot) {
 }
 
 var hiddenCommandsPattern = function hiddenCommandsPattern () {
+  let str = "For more detailed help please see the following page in confluence:";
+  let result = str.link(" https://truemotion.atlassian.net/wiki/spaces/QA/pages/556630099/Truebot");
   const hiddenCommands = process.env.HUBOT_HELP_HIDDEN_COMMANDS != null ? process.env.HUBOT_HELP_HIDDEN_COMMANDS.split(',') : undefined
   if (hiddenCommands) {
-    return new RegExp(`^hubot (?:${hiddenCommands != null ? hiddenCommands.join('|') : undefined}) - `)
+    return new RegExp(`^hubot (?:${hiddenCommands != null ? hiddenCommands.join('|') : undefined}) - `) && result
   }
 }
